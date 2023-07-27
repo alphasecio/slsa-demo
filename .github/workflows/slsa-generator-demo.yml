@@ -51,6 +51,7 @@ jobs:
     with:
       base64-subjects: "${{ needs.build.outputs.hashes }}"
       upload-assets: true # Upload provenance to a new release
+      upload-tag-name: "latest"
 
   release:
       needs: [build, provenance]
